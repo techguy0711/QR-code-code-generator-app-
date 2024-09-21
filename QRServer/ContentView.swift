@@ -6,11 +6,14 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ContentView: View {
     @ObservedObject var model = QRServerModel()
     @State private var showSizePicker: Bool = false
-    
+    @Environment(\.modelContext) private var modelContext
+    @Query private var faves: [QRStore]
+
     var SizePicker: some View {
         Picker("Size:", selection: $model.size) {
             ForEach((100...350).filter { $0 % 25 == 0 }, id: \.self) { size in
@@ -25,6 +28,15 @@ struct ContentView: View {
         }) {
             Image(systemName: "square.and.arrow.down")
             Text("Save")
+        }
+    }
+    
+    var addFavoriteButton: some View {
+        Button(action: {
+            modelContext.insert(QRStore(text: model.text, imageData: model.QRImage?.pngData()))
+        }) {
+            Image(systemName: "star.fill")
+            Text("Add to Favorites")
         }
     }
     
@@ -43,6 +55,7 @@ struct ContentView: View {
                 HStack {
                     saveButton
                     SizePicker
+                    addFavoriteButton
                 }
             }
             .padding()

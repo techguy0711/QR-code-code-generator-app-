@@ -11,7 +11,17 @@ import SwiftUI
 struct QRServerApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabView {
+                ContentView()
+                    .tabItem {
+                        Image(systemName: "house.fill")
+                    }
+                Faves()
+                    .tabItem {
+                        Image(systemName: "star.fill")
+                    }
+            }
         }
+        .modelContainer(for: QRStore.self)
     }
 }
