@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "DALL·E 2024-09-29 06.22.34 - A sleek and fancy app icon for a QR code scanner app. The icon features a stylized, minimalistic QR code in the center with modern, elegant lines. The 1.png",
       "idiom" : "universal",
       "platform" : "ios",
       "size" : "1024x1024"
@@ -12,6 +13,7 @@
           "value" : "dark"
         }
       ],
+      "filename" : "DALL·E 2024-09-29 06.22.34 - A sleek and fancy app icon for a QR code scanner app. The icon features a stylized, minimalistic QR code in the center with modern, elegant lines. The.png",
       "idiom" : "universal",
       "platform" : "ios",
       "size" : "1024x1024"
@@ -23,56 +25,67 @@
           "value" : "tinted"
         }
       ],
+      "filename" : "DALL·E 2024-09-29 06.22.34 - A sleek and fancy app icon for a QR code scanner app. The icon features a stylized, minimalistic QR code in the center with modern, elegant lines. The 2.png",
       "idiom" : "universal",
       "platform" : "ios",
       "size" : "1024x1024"
     },
     {
+      "filename" : "DALL·E 2024-09-29 06.22.34 - A sleek and fancy app icon for a QR code scanner app. The icon features a stylized, minimalistic QR code in the center with modern, elegant lines. The 3.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "16x16"
     },
     {
+      "filename" : "DALL·E 2024-09-29 06.22.34 - A sleek and fancy app icon for a QR code scanner app. The icon features a stylized, minimalistic QR code in the center with modern, elegant lines. The 4.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "16x16"
     },
     {
+      "filename" : "DALL·E 2024-09-29 06.22.34 - A sleek and fancy app icon for a QR code scanner app. The icon features a stylized, minimalistic QR code in the center with modern, elegant lines. The 5.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "32x32"
     },
     {
+      "filename" : "DALL·E 2024-09-29 06.22.34 - A sleek and fancy app icon for a QR code scanner app. The icon features a stylized, minimalistic QR code in the center with modern, elegant lines. The 6.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "32x32"
     },
     {
+      "filename" : "DALL·E 2024-09-29 06.22.34 - A sleek and fancy app icon for a QR code scanner app. The icon features a stylized, minimalistic QR code in the center with modern, elegant lines. The 7.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "128x128"
     },
     {
+      "filename" : "DALL·E 2024-09-29 06.22.34 - A sleek and fancy app icon for a QR code scanner app. The icon features a stylized, minimalistic QR code in the center with modern, elegant lines. The 8.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "128x128"
     },
     {
+      "filename" : "DALL·E 2024-09-29 06.22.34 - A sleek and fancy app icon for a QR code scanner app. The icon features a stylized, minimalistic QR code in the center with modern, elegant lines. The 9.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "256x256"
     },
     {
+      "filename" : "DALL·E 2024-09-29 06.22.34 - A sleek and fancy app icon for a QR code scanner app. The icon features a stylized, minimalistic QR code in the center with modern, elegant lines. The 10.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "256x256"
     },
     {
+      "filename" : "DALL·E 2024-09-29 06.22.34 - A sleek and fancy app icon for a QR code scanner app. The icon features a stylized, minimalistic QR code in the center with modern, elegant lines. The 11.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "512x512"
     },
     {
+      "filename" : "DALL·E 2024-09-29 06.22.34 - A sleek and fancy app icon for a QR code scanner app. The icon features a stylized, minimalistic QR code in the center with modern, elegant lines. The 12.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "512x512"

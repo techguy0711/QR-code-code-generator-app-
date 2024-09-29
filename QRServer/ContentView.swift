@@ -8,26 +8,50 @@
 import SwiftUI
 import SwiftData
 
-struct ContentView: View {
+public struct ContentView: View {
     @ObservedObject var model = QRServerModel()
-    @State private var showSizePicker: Bool = false
-    @Environment(\.modelContext) private var modelContext
-    @Query private var faves: [QRStore]
+    @State var showSizePicker: Bool = false
+    @State var showSaveSuccess: Bool = false
+    @Environment(\.modelContext) var modelContext
+    @Query var faves: [QRStore]
 
     var SizePicker: some View {
         Picker("Size:", selection: $model.size) {
             ForEach((100...350).filter { $0 % 25 == 0 }, id: \.self) { size in
                 Text("\(size)X\(size)")
+                    .tag(size)
+                    .padding()
             }
         }
+        .frame(width: UIScreen.main.bounds.width/1.2, height: 55)
+        .foregroundStyle(.white)
+        .background(
+            RoundedRectangle(
+                cornerSize: .init(width: 16, height: 16)
+            ).fill(.black)
+        )
     }
     
     var saveButton: some View {
         Button(action: {
             model.saveImage()
+            showSaveSuccess = true
         }) {
-            Image(systemName: "square.and.arrow.down")
-            Text("Save")
+            HStack(spacing: 12) {
+                Image(systemName: "square.and.arrow.down")
+                Text("Save")
+            }.padding()
+        }
+        .frame(width: UIScreen.main.bounds.width/1.2)
+        .foregroundStyle(.white)
+        .background(
+            RoundedRectangle(
+                cornerSize: .init(width: 16, height: 16)
+            ).fill(.green)
+        )
+        //Alert with Image saved, and ok button
+        .alert(isPresented: $showSaveSuccess) {
+            Alert(title: Text("Image Saved"), message: Text("Your image has been saved to your camera roll."), dismissButton: .default(Text("OK")))
         }
     }
     
@@ -38,9 +62,16 @@ struct ContentView: View {
             Image(systemName: "star.fill")
             Text("Add to Favorites")
         }
+        .frame(width: UIScreen.main.bounds.width/1.2, height: 55)
+        .foregroundStyle(.white)
+        .background(
+            RoundedRectangle(
+                cornerSize: .init(width: 16, height: 16)
+            ).fill(.blue)
+        )
     }
     
-    var body: some View {
+    public var body: some View {
         NavigationView {
             LazyVStack {
                 if model.isLoading {
@@ -52,11 +83,11 @@ struct ContentView: View {
                 if let image = model.QRImage {
                     Image(uiImage: image)
                 }
-                HStack {
+                VStack(spacing: 16) {
                     saveButton
                     SizePicker
                     addFavoriteButton
-                }
+                }.padding(.top)
             }
             .padding()
             .searchable(text: $model.text, placement: .navigationBarDrawer, prompt: "Enter text to generate QR code")
